@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const httpClient = axios.create({
-  baseURL: "http://localhost:8080/api",
+  baseURL: "http://localhost:8080/admin",
   headers: {
     "Content-type": "application/json",
   },
@@ -16,7 +16,7 @@ export const get = (id) => {
 };
 
 export const create = (data) => {
-  return httpClient.post("/livro", data);
+  return httpClient.post("", data);
 };
 
 export const update = (id, data) => {
