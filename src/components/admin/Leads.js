@@ -22,22 +22,24 @@ const Leads = () => {
 
   return (
     <div className="container list row">
-      <div className="col-md-6">
+      <div className="col-md-6 mt-4">
         <h4>Leads</h4>
         {leads.length !== 0 && (
-          <table>
+          <table className="table table-striped table-hover">
             <thead>
               <tr>
                 <th>Nome</th>
                 <th>Email</th>
               </tr>
             </thead>
-            {leads.map((lead) => (
-              <tr>
-                <td>{lead.nome}</td>
-                <td>{lead.email}</td>
-              </tr>
-            ))}
+            <tbody>
+              {leads.map((lead, key) => (
+                <tr key={key}>
+                  <td>{lead.nome}</td>
+                  <td>{lead.email}</td>
+                </tr>
+              ))}
+            </tbody>
           </table>
         )}
       </div>
