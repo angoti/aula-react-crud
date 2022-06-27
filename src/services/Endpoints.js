@@ -1,28 +1,29 @@
 import axios from "axios";
 
 const httpClient = axios.create({
-  baseURL: "http://localhost:8080/admin",
+  baseURL: "http://localhost:8080",
   headers: {
     "Content-type": "application/json",
   },
 });
 
 export const getAll = () => {
-  return httpClient.get("/livro");
-};
-
-export const get = (id) => {
-  return httpClient.get(`/livro/${id}`);
+  return httpClient.get("/admin", { headers: { Authorization: "Bearer " + localStorage.getItem("jwtToken") } });
 };
 
 export const create = (data) => {
-  return httpClient.post("", data);
+  return httpClient.post("/admin", data);
 };
 
-export const update = (id, data) => {
-  return httpClient.put(`/livro/${id}`, data);
-};
-
-export const remove = (id) => {
-  return httpClient.delete(`/livro/${id}`);
+export const login = (data) => {
+  return httpClient.post(
+    "/token",
+    {},
+    {
+      auth: {
+        username: data.nome,
+        password: data.senha,
+      },
+    }
+  );
 };

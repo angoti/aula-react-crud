@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import * as api from "../services/Endpoints";
+import * as api from "../../services/Endpoints";
 
 const NovoLead = () => {
   const estadoInicial = {
