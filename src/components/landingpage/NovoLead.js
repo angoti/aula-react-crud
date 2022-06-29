@@ -36,7 +36,7 @@ const NovoLead = () => {
     <div className="submit-form">
       {submitted ? (
         <div>
-          <h4>Cadastrado com sucesso!</h4>
+          <h4 className="text-white">Succes!</h4>
         </div>
       ) : (
         <div>
@@ -79,7 +79,6 @@ const NovoLead = () => {
               <small className="text-white">You’ll recieve your first lesson via email in less than a minute.</small>
             </div>
           </div>
-          
         </div>
       )}
     </div>
