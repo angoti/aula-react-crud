@@ -7,12 +7,10 @@
     "**/.DS_Store": true,
     "**/Thumbs.db": true,
     "README.md": true,
-    "package.json": true,
     ".gitignore": true,
     "src/setupTests.js": true,
-    "node_modules": true,
     ".vscode": true,
     "public": true
   },
-  "hide-files.files": ["README.md", "package.json", ".gitignore", "src/setupTests.js", "node_modules", ".vscode", "public"]
+  "hide-files.files": ["README.md", ".gitignore", "src/setupTests.js", ".vscode", "public"]
 }

@@ -7,6 +7,7 @@ const NovoLead = () => {
     nome: "",
     email: "",
   };
+
   const [lead, setLead] = useState(estadoInicial);
   const [submitted, setSubmitted] = useState(false);
 
@@ -19,6 +20,7 @@ const NovoLead = () => {
     api
       .create(lead)
       .then((response) => {
+        console.log(response)
         setLead({
           id: response.data.id,
           nome: response.data.titulo,
